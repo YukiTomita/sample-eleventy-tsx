@@ -1,0 +1,23 @@
+{
+  "name": "sample-eleventy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts --serve --incremental",
+    "build": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=eleventy.config.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "jsx-async-runtime": "^0.6.1"
+  },
+  "devDependencies": {
+    "react-dom": "^18.3.1",
+    "tsx": "^4.19.2"
+  }
+}

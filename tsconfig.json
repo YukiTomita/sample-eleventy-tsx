@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "outDir": "dist",
+    "strict": false,
+    "jsx": "react-jsx",
+    "jsxImportSource": "jsx-async-runtime",
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["_src/*"],
+      "@data/*": ["_src/_data/*"],
+      "@includes/*": ["_src/_modules/_includes/*"],
+      "@layouts/*": ["_src/_modules/_layouts/*"],
+    }
+  },
+  "include": ["_src"],
+  "exclude": ["node_modules", "_dist"]
+}

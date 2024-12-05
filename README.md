@@ -2,7 +2,7 @@
 
 SSG template use tsx for template of eleventy.
 
-watch:
+watch:  
 https://www.jetbrains.com/guide/javascript/tutorials/eleventy-tsx/
 
 https://www.11ty.dev/docs/languages/jsx/

@@ -1,6 +1,6 @@
 import { PageLayout } from '@layouts/pages/PageLayout.11ty';
 
-import type { TViewProps } from 'eleventy';
+import type { TViewProps } from '@/types/eleventy';
 
 export type TPostsPageProps = TViewProps;
 
@@ -15,7 +15,7 @@ export const PostsPage = (props: TPostsPageProps): JSX.Element => {
         posts.map((post) => {
           return (
             <li>
-              <a href={`/posts/${post.data.id}`}>{post.data.title}</a>
+              <a href={`/posts/${post.data.id}/`}>{post.data.title}</a>
             </li>
           )
         })

@@ -1,6 +1,6 @@
 import { PageLayout } from '@layouts/pages/PageLayout.11ty';
 
-import type { TViewProps } from 'eleventy';
+import type { TViewProps } from '@/types/eleventy';
 
 export type TAboutPageProps = TViewProps;
 

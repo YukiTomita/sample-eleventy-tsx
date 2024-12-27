@@ -17,7 +17,9 @@
     "jsx-async-runtime": "^0.6.1"
   },
   "devDependencies": {
+    "@11ty/eleventy-plugin-vite": "^5.0.2",
     "react-dom": "^18.3.1",
+    "sass": "^1.82.0",
     "tsx": "^4.19.2"
   }
 }

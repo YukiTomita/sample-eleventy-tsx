@@ -1,9 +1,9 @@
 import "tsx/esm";
 import { jsxToString } from "jsx-async-runtime";
 import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
+import autoprefixer from 'autoprefixer';
 
 import posts from './_src/_data/posts';
-import rollupConfig from "./rollup.config";
 
 const BASE_DIR = './_src';
 
@@ -20,6 +20,9 @@ export default async function(eleventyConfig: any) {
     viteOptions: {
       publicDir: '_src/public',
       css: {
+        postcss: {
+          plugins: [autoprefixer]
+        },
         preprocessorOptions: {
           scss: {
             api: "modern-compiler",

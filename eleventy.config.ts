@@ -6,6 +6,8 @@ import autoprefixer from 'autoprefixer';
 import posts from './_src/_data/posts';
 
 const BASE_DIR = './_src';
+const PROJECT_BASE_DIR = '';
+const OUTPUT_DIR = '_dist';
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig: any) {
@@ -17,7 +19,17 @@ export default async function(eleventyConfig: any) {
 
   // vite
   eleventyConfig.addPlugin(EleventyVitePlugin, {
+		serverOptions: {
+      port: 8080,
+      watch: [
+        `${BASE_DIR}/**/*.js`,
+        `${BASE_DIR}/**/*.ts`,
+        `${BASE_DIR}/**/*.tsx`,
+        `${BASE_DIR}/**/*.scss`,
+      ]
+    },
     viteOptions: {
+      base: PROJECT_BASE_DIR ? `/${PROJECT_BASE_DIR}/` : '',
       publicDir: '_src/public',
       css: {
         postcss: {
@@ -69,8 +81,9 @@ export default async function(eleventyConfig: any) {
       includes: '../_modules/_includes',
       layouts: '../_modules/_layouts', 
       data: '../_data',
-      output: "_dist"
+      output: PROJECT_BASE_DIR ? `${OUTPUT_DIR}/${PROJECT_BASE_DIR}`: OUTPUT_DIR
     },
+    pathPrefix:  PROJECT_BASE_DIR ? `/${PROJECT_BASE_DIR}/` : '/'
   }
 }
 
